@@ -1,0 +1,21 @@
+git init
+git clone
+git add *
+git commit -m "Fisrt commit"
+git origin master
+git push <path repository>
+git push --set-upstream <path repository> master
+
+update
+------
+git pull <path repository>
+git merge <path repository>
+git add *
+git diff
+git commit -m "blablabla"
+git origin master
+git push <path repository>
+
+
+
+
