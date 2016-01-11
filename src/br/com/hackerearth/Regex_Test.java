@@ -1,4 +1,4 @@
-package br.com.hackerrank.matching;
+package br.com.hackerearth;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;

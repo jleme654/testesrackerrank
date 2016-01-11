@@ -1,10 +1,10 @@
-package br.com.hackerrank.matching;
+package br.com.hackerearth;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Solution {
+public class Solution2 {
 
 	static void checker(String Regex_Pattern) {
 
