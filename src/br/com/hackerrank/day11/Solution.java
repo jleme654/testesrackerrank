@@ -35,24 +35,24 @@ public class Solution {
 			sum = 0;
 		}
 		
-//		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-//		for (x = 0; x < total; x++) {
-//			for (k = 1; k < 3; k++) {
-//				for (k2 = 0; k2 < 3; k2++) {
-//					System.out.print(arr[k][k2] + " ");
-//					sum += arr[k][k2];
-//				}
-//				System.out.println();
-//			}
-//			System.out.println("---------------");
-//			sum -= arr[um][zero];
-//			sum -= arr[um][dois];
-//			System.out.println(sum + "\n");
-//			coluna++;
-//			count++;
-//			zero++;
-//			dois++;
-//			sum = 0;
-//		}
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		for (x = 0; x < total; x++) {
+			for (k = 1; k < 3; k++) {
+				for (k2 = 0; k2 < 3; k2++) {
+					System.out.print(arr[k][k2] + " ");
+					sum += arr[k][k2];
+				}
+				System.out.println();
+			}
+			System.out.println("---------------");
+			sum -= arr[um][zero];
+			sum -= arr[um][dois];
+			System.out.println(sum + "\n");
+			coluna++;
+			count++;
+			zero++;
+			dois++;
+			sum = 0;
+		}
 	}
 }
