@@ -4,43 +4,49 @@ public class Grade extends Student {
 
 	private int score;
 
-	Grade(String fname, String lname, int p) {
-		super(fname, lname, p);
-		this.firstName = fname;
-		this.lastName = lname;
-		this.phone = p;
-	}
-
 	Grade(String fname, String lname, int p, int scor) {
 		super(fname, lname, p);
-		if (String.valueOf(this.phone).length() != 7) {
-			this.phone = 0;
-			return;
+		if (this.firstName.length() >= 4 && this.firstName.length() <= 10) {
+			this.firstName = fname;
 		} else {
+			System.exit(0);
+		}
+
+		if (this.lastName.length() >= 4 && this.lastName.length() <= 10) {
+			this.lastName = lname;
+		} else {
+			System.err.close();
+		}
+
+		if (String.valueOf(this.phone).length()==7) {
 			this.phone = p;
+		} else {
+			System.exit(0);
 		}
 		this.score = scor;
-		this.firstName = fname;
-		this.lastName = lname;
 	}
 
 	public char calculate() {
 		int sc = this.score;
-		if (sc < 40 && sc > 1) {
+		if (sc > 1 && sc < 40) {
 			return 'D';
-		} else if (40 >= sc & sc <= 60) {
-			return 'B';
-		} else if (60 >= sc & sc <= 75) {
-			return 'A';
-		} else if (75 >= sc & sc <= 90) {
-			return 'E';
-		} else if (90 >= sc & sc <= 100) {
-			return 'O';
-		} else if (100 >= sc & sc <= 1) {
-			return ' ';
-		} else {
-			return ' ';
 		}
-	}
+		if (sc >= 40 && sc < 60) {
+			return 'B';
+		}
+		if (sc >= 60 && sc < 75) {
+			return 'A';
+		}
+		if (sc >= 75 && sc < 90) {
+			return 'E';
+		}
+		if (sc >= 90 && sc <= 100) {
+			return 'O';
+		}
+		if (sc > 100 && sc < 1) {
+			System.exit(0);
+		}
+		return ' ';
+	}	
 
 }
