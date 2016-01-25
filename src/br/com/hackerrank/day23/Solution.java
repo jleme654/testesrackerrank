@@ -1,11 +1,27 @@
 package br.com.hackerrank.day23;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 class Solution {
 	static void levelOrder(Node root) {
-		// Write your code here
+		if (root == null) {
+			   return;
+			}
 
+			Queue<Node> queue = new LinkedList<Node>() ;
+
+			queue.clear();
+			queue.add(root);
+
+			while(!queue.isEmpty()){
+			    Node temp = queue.remove();
+			    System.out.print(temp.data + " ");
+			    if(temp.left != null) queue.add(temp.left);
+			    if(temp.right != null) queue.add(temp.right);
+			}  
+		
 	}
 
 	public static Node insert(Node root, int data) {
